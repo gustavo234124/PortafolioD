@@ -1,0 +1,286 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{/*usar root es importante para despues cuando queramos hacer cambios masivos*/
+    --primary:rgb(10, 253, 241);
+    --secondary:#ffff;
+    --secondary-light:rgb(173, 173, 173);
+    --dark1:#222222;
+    --dark2:#050505;
+}
+body{
+    font-size: 18px;
+    font-family:'Signika', sans-serif;
+    color: var(--secondary);
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar ul{
+    display: flex;
+    list-style:none;
+}
+.navbar a{
+    font-size: 1.5rem;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+}
+.navbar a:hover{
+    border-bottom: var(--primary) solid;
+}
+
+
+.hero{
+    background-color: var(--dark2);
+    position: relative;
+}
+.hero img{
+    width: 100%;
+    opacity:0.45;
+}
+span{
+    color: var(--primary);
+}
+/*codigo para el circulo de perfil o circucle profile*/
+.profile div{
+    position: absolute;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+}
+.square{
+    width: 320px;
+    height: 430px;
+    background-color: var(--dark1);
+    opacity: 0.7;
+    z-index: 10;
+    top: 40px;
+}
+.circle-trans{
+    width: 250px;
+    height: 250px;
+    border-radius: 30%;
+    border: solid 30px var(--primary);
+    opacity: .2;
+    z-index: 19;
+    top: 64px;
+}
+.circle{
+    width: 220px;
+    height: 220px;
+    border-radius: 30%;
+    border: solid 15px var(--primary);
+    z-index: 21;
+    top: 80px;
+}
+.profile-img{
+    top: 90px;
+    z-index: 20;
+}
+
+.profile-img img{
+    width: 194px;
+    height: 205px;
+    border-radius: 31%;
+}
+.square-text{
+    font-size: 1.9rem;
+    color: var(--secondary);
+    top: 319px;
+    z-index: 11;
+}
+.square-text-2{
+    font-size: .83rem;
+    color: var(--secondary);
+    top: 368px;
+    z-index: 12;
+}
+.square-text-3{
+    font-size: 1.3rem;
+    color: var(--secondary);
+    top: 435px;
+    z-index: 11;
+}
+.square-text-3:hover{
+    border-bottom: var(--primary) solid;
+}
+.square-text-3 a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+.contact-icon{
+top: 394px;
+z-index: 11;
+}
+.contact-icon img{
+    width:40px;
+    height: 40px;
+    margin: 0 3px;
+}
+.contact-icon img:hover{
+    transform: scale(1.5);
+}
+
+/*codigo para la segunda seccion donde estara el portafolio*/
+.briefcase{
+    background-color: var(--dark1);
+}
+
+.briefcase-section h2{
+    padding: 40px;
+    text-align: center;
+}
+
+.briefcase-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(290px,auto));
+    gap: 15px;
+    width: 90%;
+    margin:0 auto;
+}
+
+.briefcase-grid img{
+    width: 100%;
+    border-radius: 15px; 
+    padding: 10px;
+    height: 190px;
+    transition: transform 0.5s ease;
+}
+
+.briefcase-grid img:hover{
+    transform:scale(1.2);
+}
+
+.skills{
+    background-color: var(--dark1);
+    
+}
+
+/*codigo de la seccion de conocimientos*/
+
+section.skills{
+    background-color: var(--dark1);
+}
+
+.skill{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,auto));
+    justify-content: center;
+    gap: 170px;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 110px;
+    
+}
+
+.skill h2{
+    padding: 40px;
+    text-align: center;
+}
+
+.skill img{
+    width:90px;
+    height: 90px;
+}
+
+.knowledge{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,auto));
+    justify-content: center;
+    gap: 25px;
+}
+
+.tools{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(70px,auto));
+    justify-content: center;
+    gap: 30px;
+}
+/*ANIMACION DE LA SECCION DE HERAMIENTAS Y CONOCIMIENTOS*/
+.skill h3{
+    background-color: var(--dark2);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    width: 100px;
+    opacity: 0;
+    transform: translate(0px,-110px);
+    color: var(--primary);
+    transition: transform 0.6s ease, opacity 0.4s ease;
+}
+
+.knowledge>div:hover h3,
+.tools>div:hover h3{
+    transform: translate(0px,-150px);
+    opacity: 1;
+}
+/*ESTILOS DE LA SECCION ABOUT*/
+.about{
+    background-color: var(--dark2);
+}
+.about-flex{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0 90px;
+}
+.about p{
+    font-size: 1.5rem;
+    width:70%;
+    margin: 0 auto;
+    line-height: 2.5rem;
+    color: var(--secondary-light);
+
+}
+.social{
+    border-left: var(--secondary)5px solid;
+    padding-left: 50px;
+}
+.social-img{
+    width: 60px;
+    margin: 10px;
+}
+.social img{
+    width: 60px;
+    height: 60px;
+}
+.social img:hover{
+    transform: scale(1.2);
+}
+footer{
+    background-color: var(--dark2);
+    text-align: center;
+    color: var(--secondary-light);
+    
+}
+/*SECCION DEL RESPOSITORIO*/
+.icon-element{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.icon-element a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+.icon-element img{
+    width: 80px;
+    height: 80px;
+}
+.icon-element img:hover{
+    transform: scale(1.2);
+}
+.icon-element span:hover{
+    color: chocolate;
+}
